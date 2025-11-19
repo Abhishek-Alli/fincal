@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Planner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo"><i class="fas fa-calculator"></i> finCal</a>
+            <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sip-calculator.html" class="nav-link">SIP</a>
+                <a href="swp-calculator.html" class="nav-link">SWP</a>
+                <a href="emi-calculator.html" class="nav-link">EMI</a>
+                <a href="home-loan-calculator.html" class="nav-link">Home Loan</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page">
+        <div class="container">
+            <div class="page-header"><h1>Retirement Planner</h1></div>
+            <div class="calculator-container">
+                <div class="calculator">
+                    <h2>Plan Future</h2>
+                    <div class="input-group">
+                        <label>Current Age</label>
+                        <input type="number" id="ret-age" value="30">
+                        <div class="slider-container"><input type="range" id="ret-age-slider" class="slider" min="18" max="60" value="30"></div>
+                    </div>
+                    <div class="input-group">
+                        <label>Retirement Age</label>
+                        <input type="number" id="ret-ret-age" value="60">
+                        <div class="slider-container"><input type="range" id="ret-ret-age-slider" class="slider" min="40" max="75" value="60"></div>
+                    </div>
+                    <div class="input-group">
+                        <label>Monthly Expense (Today) (₹)</label>
+                        <input type="number" id="ret-expense" value="30000">
+                        <div class="slider-container"><input type="range" id="ret-expense-slider" class="slider" min="10000" max="200000" value="30000"></div>
+                    </div>
+                    <div class="input-group">
+                        <label>Inflation (%)</label>
+                        <input type="number" id="ret-inflation" value="6">
+                        <div class="slider-container"><input type="range" id="ret-inflation-slider" class="slider" min="1" max="10" value="6"></div>
+                    </div>
+                    <div class="results">
+                        <div class="result-item"><span>Years to Retire</span><span id="ret-years" class="result-value">30</span></div>
+                        <div class="result-item"><span>Corpus Needed</span><span id="ret-corpus" class="highlight">₹0</span></div>
+                        <div class="result-item"><span>Monthly Savings Req.</span><span id="ret-monthly-savings" class="result-value">₹0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer><div class="container"><p class="copyright">&copy; 2025 finCal</p></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

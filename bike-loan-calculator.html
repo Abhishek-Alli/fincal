@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Loan Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo"><i class="fas fa-calculator"></i> finCal</a>
+            <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sip-calculator.html" class="nav-link">SIP</a>
+                <a href="swp-calculator.html" class="nav-link">SWP</a>
+                <a href="emi-calculator.html" class="nav-link">EMI</a>
+                <a href="home-loan-calculator.html" class="nav-link">Home Loan</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page">
+        <div class="container">
+            <div class="page-header"><h1>Bike Loan Calculator</h1></div>
+            <div class="calculator-container">
+                <div class="calculator">
+                    <h2>Estimate Bike Loan</h2>
+                    <div class="input-group">
+                        <label>Bike Price (₹)</label>
+                        <input type="number" id="bike-price" value="150000">
+                        <div class="slider-container"><input type="range" id="bike-price-slider" class="slider" min="20000" max="500000" value="150000" step="5000"></div>
+                    </div>
+                    <div class="input-group">
+                        <label>Down Payment (₹)</label>
+                        <input type="number" id="bike-downpayment" value="30000">
+                        <div class="slider-container"><input type="range" id="bike-downpayment-slider" class="slider" min="0" max="150000" value="30000" step="5000"></div>
+                    </div>
+                    <div class="input-group">
+                        <label>Loan Amount (₹)</label>
+                        <input type="number" id="bike-loan-amount" readonly style="background:#eee;">
+                    </div>
+                    <div class="input-group">
+                        <label>Interest Rate (%)</label>
+                        <input type="number" id="bike-interest-rate" value="11.5">
+                        <div class="slider-container"><input type="range" id="bike-interest-rate-slider" class="slider" min="5" max="25" value="11.5" step="0.1"></div>
+                    </div>
+                    <div class="input-group">
+                        <label>Tenure (Years)</label>
+                        <input type="number" id="bike-loan-tenure" value="3">
+                        <div class="slider-container"><input type="range" id="bike-loan-tenure-slider" class="slider" min="1" max="5" value="3"></div>
+                    </div>
+                    <div class="results">
+                        <div class="result-item"><span>Monthly EMI</span><span id="bike-emi" class="highlight">₹0</span></div>
+                        <div class="result-item"><span>Total Interest</span><span id="bike-total-interest" class="result-value">₹0</span></div>
+                        <div class="result-item"><span>Total Payment</span><span id="bike-total-payment" class="result-value">₹0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><div class="container"><p class="copyright">&copy; 2025 finCal. All rights reserved.</p></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

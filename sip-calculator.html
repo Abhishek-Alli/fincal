@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo"><i class="fas fa-calculator"></i> finCal</a>
+            <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="sip-calculator.html" class="nav-link active">SIP</a>
+                <a href="swp-calculator.html" class="nav-link">SWP</a>
+                <a href="emi-calculator.html" class="nav-link">EMI</a>
+                <a href="home-loan-calculator.html" class="nav-link">Home Loan</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page">
+        <div class="container">
+            <div class="page-header"><h1>SIP Calculator</h1></div>
+            
+            <div class="content-page">
+                <h2>What is SIP?</h2>
+                <p>A Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly.</p>
+                <ul>
+                    <li><strong>Disciplined Investing:</strong> Invest regularly.</li>
+                    <li><strong>Rupee Cost Averaging:</strong> Buy more when prices are low.</li>
+                </ul>
+            </div>
+
+            <div class="calculator-container">
+                <div class="calculator">
+                    <h2>SIP Calculator</h2>
+                    <div class="input-group">
+                        <label>Monthly Investment (₹)</label>
+                        <input type="number" id="sip-monthly" value="10000">
+                        <div class="slider-container"><input type="range" id="sip-monthly-slider" class="slider" min="500" max="100000" value="10000"></div>
+                    </div>
+                    <div class="input-group">
+                        <label>Expected Return (%)</label>
+                        <input type="number" id="sip-return" value="12">
+                        <div class="slider-container"><input type="range" id="sip-return-slider" class="slider" min="1" max="30" value="12"></div>
+                    </div>
+                    <div class="input-group">
+                        <label>Time Period (Years)</label>
+                        <input type="number" id="sip-period" value="10">
+                        <div class="slider-container"><input type="range" id="sip-period-slider" class="slider" min="1" max="40" value="10"></div>
+                    </div>
+                    <div class="results">
+                        <div class="result-item"><span>Invested</span><span id="sip-invested" class="result-value">₹0</span></div>
+                        <div class="result-item"><span>Est. Returns</span><span id="sip-returns" class="result-value">₹0</span></div>
+                        <div class="result-item"><span>Total Value</span><span id="sip-total" class="highlight">₹0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2><i class="fas fa-calculator"></i> finCal</h2>
+                    <p>Your trusted partner for financial planning and investment calculations.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Tools</h3>
+                        <ul>
+                            <li><a href="sip-calculator.html">SIP Calculator</a></li>
+                            <li><a href="emi-calculator.html">EMI Calculator</a></li>
+                            <li><a href="home-loan-calculator.html">Home Loan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 finCal. All rights reserved.</p>
+        </div>
+    </footer>  
+    <script src="script.js"></script>
+</body>
+</html>
